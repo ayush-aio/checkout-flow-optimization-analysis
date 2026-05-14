@@ -1,50 +1,186 @@
-# Checkout Flow Optimization Analysis (SQL, Tableau)
+# Checkout Flow Optimization Analysis with SQL & Tableau
 
 ## Project Overview
-This project analyzes an e-commerce checkout funnel to identify where users drop off during the checkout process and how conversion rates can be improved. The analysis focuses on understanding user behavior across multiple checkout stages and delivering data-driven recommendations to optimize purchase completion.
+
+This project focuses on analyzing and optimizing the checkout flow of an online learning platform using SQL and Tableau. The objective was to identify key friction points in the payment journey, improve checkout success rates, and reduce cart abandonment by transforming raw checkout activity data into actionable business insights.
+
+The analysis was conducted on user checkout activity between July 2022 and January 2023, covering cart creation, checkout attempts, payment failures, successful transactions, and device-level behavior.
 
 ---
 
 ## Business Problem
-Checkout abandonment is one of the biggest challenges in e-commerce. Even small inefficiencies in the checkout flow can lead to significant revenue loss.  
-The goal of this project is to identify critical drop-off points in the checkout process and propose actionable improvements.
+
+The platform experienced checkout inefficiencies that impacted conversion rates and customer experience. Users were abandoning carts, encountering payment-related errors, and facing usability challenges during the checkout process.
+
+The project aimed to:
+
+* Analyze user behavior throughout the checkout funnel
+* Identify major causes of checkout failures
+* Measure checkout success and cart abandonment trends
+* Detect device-specific payment issues
+* Recommend data-driven improvements to enhance conversions
 
 ---
 
-## Dataset Description
-- User-level checkout session data
-- Each record represents a user interaction at a checkout stage
-- Multiple stages including cart, address, payment, and confirmation
+## Objectives
+
+* Measure Monthly Checkout Success Rate
+* Measure Monthly Cart Abandonment Rate
+* Identify the most common checkout errors
+* Analyze checkout behavior across desktop and mobile devices
+* Build an interactive Tableau story dashboard for business stakeholders
 
 ---
 
-## Analysis Performed
+## Tools & Technologies
 
-### SQL Analysis
-- Analyzed 40k+ checkout sessions
-- Calculated step-wise conversion and abandonment rates
-- Identified key friction points with 20–25% drop-off at payment stages
-- Segmented user behavior across checkout steps
+* SQL (CTEs, JOINs, Aggregations, Filtering)
+* Tableau Public
+* MySQL Workbench
+* CSV Data Processing
 
-### Tableau Visualization
-- Built an interactive checkout funnel dashboard
-- Visualized user progression and drop-offs
-- Highlighted bottlenecks impacting conversion efficiency
+---
+
+## Dataset Overview
+
+The dataset included:
+
+* User checkout activity logs
+* Cart creation records
+* Checkout actions
+* Payment status events
+* Device information
+* Error messages
+
+Analysis period:
+
+* 2022-07-01 to 2023-01-31
+
+---
+
+## Key SQL Operations Performed
+
+* Built multiple Common Table Expressions (CTEs)
+* Performed JOIN operations to map user journeys
+* Aggregated daily and monthly checkout metrics
+* Filtered successful and failed payment events
+* Exported processed datasets for Tableau visualization
+
+Key metrics calculated:
+
+* Checkout Success Rate
+* Cart Abandonment Rate
+* Checkout Attempts
+* Successful Transactions
+* Device-wise Error Frequency
+
+---
+
+## Tableau Dashboard Features
+
+Developed a 3-page interactive story dashboard containing:
+
+### 1. Checkout Success Rate Dashboard
+
+* Monthly checkout attempts
+* Monthly successful payments
+* Checkout success percentage trends
+
+### 2. Cart Abandonment Dashboard
+
+* Monthly cart creation trends
+* Abandonment rate analysis
+* Conversion drop-off identification
+
+### 3. Error & Device Analysis Dashboard
+
+* Most frequent checkout errors
+* Device-wise error distribution
+* Desktop vs Mobile checkout comparison
 
 ---
 
 ## Key Insights
-- The payment stage showed the highest abandonment rate
-- Minor friction at late checkout stages has a disproportionate impact on overall conversion
-- Optimizing checkout flow could potentially improve completion rates by 5–10%
+
+* September 2022 recorded the lowest checkout success rate.
+* October 2022 showed the highest cart abandonment rate.
+* The most frequent error identified was “Number Field is Required”.
+* Mobile users experienced significantly more checkout errors compared to desktop users.
+* Despite only 32% of checkout attempts coming from mobile devices, mobile users generated the highest error occurrences.
+
+---
+
+## Business Recommendations
+
+### 1. Improve Mobile Checkout Experience
+
+* Enhance visibility of card input fields
+* Optimize form responsiveness for smaller screens
+* Simplify mobile payment flow
+
+### 2. Implement Real-Time Validation
+
+* Validate card number, expiry date, and CVV during input
+* Reduce payment failures caused by incorrect entries
+
+### 3. Introduce Alternative Payment Methods
+
+* Add digital wallets and buy-now-pay-later options
+* Reduce dependency on traditional card payments
+
+### 4. Analyze User Demographics
+
+* Investigate payment behavior by device, region, and card type
+* Personalize payment support for high-failure user groups
+
+---
+
+## Project Outcomes
+
+* Improved understanding of user checkout behavior
+* Identified critical conversion bottlenecks
+* Enabled data-driven optimization opportunities
+* Delivered actionable insights for improving customer experience and conversion rates
+
+---
+
+## Skills Demonstrated
+
+* Data Cleaning & Transformation
+* SQL Query Optimization
+* Funnel & Conversion Analysis
+* Dashboard Development
+* Data Visualization
+* Business Intelligence
+* User Behavior Analytics
+* Problem Solving
+
+---
+
+## Project Structure
+
+```
+checkout-flow-optimization/
+│
+├── sql_queries/
+│   ├── checkout_steps.sql
+│   ├── checkout_errors.sql
+│
+├── datasets/
+│   ├── checkout_steps.csv
+│   ├── checkout_errors.csv
+│
+├── tableau_dashboard/
+│   ├── checkout_story_dashboard.twbx
+│
+├── screenshots/
+│   ├── dashboard_preview.png
+│
+└── README.md
+```
 
 ---
 
 ## Conclusion
-The analysis demonstrates how funnel analytics and visualization can be used to identify revenue-impacting issues in product flows. The insights from this project can help businesses improve user experience and increase conversions through targeted checkout optimizations.
 
----
-
-## Tools Used
-- SQL
-- Tableau
+This project demonstrates how SQL and Tableau can be leveraged together to analyze customer checkout behavior, uncover conversion bottlenecks, and improve user experience through data-driven insights. The findings highlight the importance of optimizing mobile checkout flows and reducing payment friction to maximize successful transactions.
